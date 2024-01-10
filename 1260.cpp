@@ -1,9 +1,15 @@
 #include <iostream>
 #include <vector>
+#include <queue>
 using namespace std;
 
 vector<int> vArr[1000];
 int visit[1000] = { 0, };
+int visit2[1000] = { 0, };
+
+void bfs(int node) {
+
+}
 
 void dfs(int node) {
 	visit[node] = 1;
@@ -27,6 +33,7 @@ int main() {
 		vArr[V2].push_back(V1);
 	}
 	dfs(V);
+	bfs(V);
 	cout << "\n";
 	return 0;
 }

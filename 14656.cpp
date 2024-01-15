@@ -3,6 +3,7 @@
 using namespace std;
 
 int main() {
+
 	vector<int> v;
 	int N;
 	int input;
@@ -12,13 +13,12 @@ int main() {
 		cin >> input;
 		v.push_back(input);
 	}
-	int standard = v[0];
+	int start = 1;
 	for (int i = 0; i < N; i++) {
-		standard = v[i];
-		if (standard + 1 == v[i] || standard - 1 == v[i] || standard == v[i]) {
-			continue;
+		if (start != v[i]) {
+			result++;
 		}
-		result++;
+		start++;
 	}
 
 

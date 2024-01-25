@@ -17,7 +17,7 @@ int main() {
 			cout << "1";
 		}
 	}
-	else if (A.length() >= B.length()) {
+	else if (A.length() > B.length()) {
 		if (oper == '*') {
 			if (B.length() > 1) {
 				for (int i = 0; i < B.length() - 1; i++) {
@@ -30,7 +30,7 @@ int main() {
 		}
 		cout << A;
 	}
-	else {
+	else if (A.length() < B.length()){
 		if (oper == '*') {
 			if (A.length() > 1) {
 				for (int i = 0; i < A.length() - 1; i++) {
@@ -43,9 +43,19 @@ int main() {
 		}
 		cout << B;
 	}
-	
-
-
+	else { // 자리수가 같을때
+		if (oper == '*') {
+			if (B.length() > 1) {
+				for (int i = 0; i < B.length() - 1; i++) {
+					A.push_back('0');
+				}
+			}
+		}
+		else if (oper == '+') {
+			B[0] = '2';
+		}
+		cout << B;
+	}
 
 	return 0;
 }
